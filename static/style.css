@@ -1,0 +1,142 @@
+/* Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    user-select: none;
+}
+
+body
+{
+    /* To center the main container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-color: #10131c;
+}
+
+.main-window
+{
+    display: flex;
+    /* Question on top, buttons on bottom */
+    flex-direction: column;
+    width: 70vw;
+    height: 70vh;
+    background: #212532;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++ Question container ++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++ */
+.question-section
+{
+    cursor: hand;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #171a22;
+    height: 70%;
+    padding: 10%;
+
+    font-size: 2em;
+    overflow: hidden;
+
+    transition: 1s;
+}
+
+.question-section:hover
+{
+    background: #1e232e;
+    font-size: 2.1em;
+    padding: 7%;
+    color: #fcffd5;
+}
+.question-section:hover #question-text
+{
+    /* Text highlight */
+    color: #fcffd5; 
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++ Buttons container +++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+.buttons-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #2a2f3d;
+
+    height: 30%;
+    
+    overflow: hidden;
+}
+
+.answer-button
+{
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 5%;
+    padding: 5%;
+
+    transition: 0.2s;
+
+    color: rgb(187, 187, 187);
+    font-size: 1.5em;
+}
+.answer-button:hover
+{
+    transform: scale(1.1);
+    color: #fff;
+}
+/* Highligh line at the bottom */
+.answer-button::before
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 7px;
+    background-color: #fff;
+    transition: 0.2s;
+}
+/* Since the div is getting enlarged, the line underneath is to be adjusted */
+.answer-button:hover::before
+{
+    left: 9%;
+    top: 95%;
+    width: 83%;
+}
+
+/* Class for divs to get hidden */
+.invisible
+{
+    transform: scale(0);
+    width: 0;
+    padding: 0;
+}
